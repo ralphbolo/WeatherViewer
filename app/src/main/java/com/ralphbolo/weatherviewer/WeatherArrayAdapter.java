@@ -66,9 +66,9 @@ public class WeatherArrayAdapter extends ArrayAdapter<Weather>{
 
         Context context = getContext();
         viewHolder.dayTextView.setText(context.getString(R.string.day_description, day.dayOfWeek, day.description));
-        viewHolder.lowTextView.setText(context.getString(R.string.low_temp));
-        viewHolder.hiTextView.setText(context.getString(R.string.high_temp));
-        viewHolder.humidityTextView.setText(context.getString(R.string.humidity));
+        viewHolder.lowTextView.setText(context.getString(R.string.low_temp, day.minTemp));
+        viewHolder.hiTextView.setText(context.getString(R.string.high_temp, day.maxTemp));
+        viewHolder.humidityTextView.setText(context.getString(R.string.humidity, day.humidity));
 
         return convertView;
     }

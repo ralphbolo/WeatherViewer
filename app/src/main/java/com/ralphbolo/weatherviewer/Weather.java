@@ -26,7 +26,7 @@ public class Weather {
         this.maxTemp = numberFormat.format(maxTemp) + "\u00B0F";
         this.humidity = NumberFormat.getPercentInstance().format(humidity/ 100.0);
         this.description = description;
-        this.iconURL = "http://openweathermap.org/img/w" + iconName + ".png";
+        this.iconURL = "http://openweathermap.org/img/w/" + iconName + ".png";
     }
 
     private static String convertTimeStampToDay(long timeStamp) {
